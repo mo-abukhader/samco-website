@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" dir="rtl" lang="ar">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>الشركة المتقدمة الثانية الطبية (سامكو) | Second Advanced Medical Company - SAMCO</title>
+<meta content="الشركة المتقدمة الثانية الطبية (سامكو) - مصنع سعودي رائد منذ عام 1992 متخصص في الأجهزة الطبية، المستلزمات المخبرية، وسائط زراعة الأنسجة، وأنابيب سحب الدم." name="description"/>
+<link href="./assets/images/samco-logo.webp" rel="icon" type="image/webp"/>
+<!-- Tailwind CSS CDN -->
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#f0f9ff',
+              100: '#e0f2fe',
+              200: '#bae6fd',
+              500: '#0ea5e9',
+              600: '#107fc9', // authentic SAMCO cyan-blue
+              700: '#0369a1',
+              800: '#075985',
+              900: '#0c4a6e',
+              navy: '#091e3a',
+              dark: '#0f172a'
+            }
+          }
+        }
+      }
+    }
+  </script>
+<!-- Font Awesome 6 -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet"/>
+<!-- Custom Stylesheet -->
+<link href="./assets/css/styles.css" rel="stylesheet"/>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased selection:bg-sky-500 selection:text-white">
+<!-- TOP ANNOUNCEMENT BAR -->
+<div class="bg-brand-navy text-slate-300 text-xs py-2 px-4 border-b border-slate-700/60 hidden md:block">
+<div class="max-w-7xl mx-auto flex justify-between items-center">
+<div class="flex items-center space-x-6 rtl:space-x-reverse">
+<span class="flex items-center"><i class="fa-solid fa-location-dot text-brand-500 mr-2 ml-2"></i> <span data-i18n="top_location">المملكة العربية السعودية – الرياض 11383</span></span>
+<a class="flex items-center hover:text-white transition-colors" href="tel:00966114889311"><i class="fa-solid fa-phone text-brand-500 mr-2 ml-2"></i> <span data-i18n="top_phone" dir="ltr">00966114889311</span></a>
+<a class="flex items-center hover:text-white transition-colors" href="mailto:info@adv2-medical.com"><i class="fa-solid fa-envelope text-brand-500 mr-2 ml-2"></i> <span data-i18n="top_email">info@adv2-medical.com</span></a>
+</div>
+<div class="flex items-center space-x-4 rtl:space-x-reverse">
+<span class="inline-flex items-center px-2 py-0.5 rounded text-[11px] font-semibold bg-emerald-950 text-emerald-300 border border-emerald-800/80"><i class="fa-solid fa-shield-check mr-1 ml-1"></i> SFDA &amp; ISO 13485 Certified</span>
+<button class="lang-switcher-btn hover:text-white transition-all duration-200 font-semibold text-xs px-2.5 py-1 rounded bg-slate-800 hover:bg-slate-700 border border-slate-700">
+<i class="fa-solid fa-globe mr-1 ml-1"></i> English
+        </button>
+</div>
+</div>
+</div>
+<!-- MAIN NAVIGATION BAR -->
+<header class="sticky top-0 z-40 glass-nav transition-all duration-300" id="main-header">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex justify-between items-center h-20">
+<!-- Logo -->
+<a class="flex items-center gap-3" href="index.html">
+<img alt="SAMCO Logo" class="h-12 w-auto object-contain" src="./assets/images/samco-logo.webp"/>
+</a>
+<!-- Desktop Navigation -->
+<nav class="hidden lg:flex items-center space-x-7 rtl:space-x-reverse font-medium text-sm text-slate-700">
+<a class="text-brand-600 font-semibold hover:text-brand-700 transition-colors" data-i18n="nav_home" href="index.html">الرئيسية</a>
+<a class="hover:text-brand-600 transition-colors" data-i18n="nav_about" href="about.html">من نحن</a>
+<a class="hover:text-brand-600 transition-colors flex items-center gap-1" data-i18n="nav_products" href="products.html">
+<span>منتجاتنا</span>
+<span class="px-1.5 py-0.5 text-[10px] bg-brand-50 text-brand-600 rounded font-bold uppercase tracking-wider">Catalog</span>
+</a>
+<a class="hover:text-brand-600 transition-colors" data-i18n="nav_oem" href="oem.html">التصنيع والحلول التعاقدية</a>
+<a class="hover:text-brand-600 transition-colors" data-i18n="nav_careers" href="careers.html">الوظائف</a>
+<a class="hover:text-brand-600 transition-colors" data-i18n="nav_contact" href="contact.html">تواصل معنا</a>
+</nav>
+<!-- Right Header CTA & Language Switcher -->
+<div class="hidden sm:flex items-center gap-3">
+<button class="lang-switcher-btn lg:flex items-center text-xs font-semibold text-slate-700 hover:text-brand-600 px-3 py-2 rounded-lg border border-slate-200 hover:border-brand-500 bg-white shadow-sm transition-all">
+<i class="fa-solid fa-globe mr-1.5 ml-1.5"></i> English
+          </button>
+<button class="gradient-primary text-white text-xs font-semibold px-4 py-2.5 rounded-xl shadow-md hover:shadow-lg hover:opacity-95 transition-all flex items-center gap-2" onclick="openInquiryDrawer()">
+<i class="fa-solid fa-file-invoice"></i>
+<span data-i18n="nav_inquire_btn">طلب عرض سعر / عينة</span>
+</button>
+</div>
+<!-- Mobile Menu Hamburger Button -->
+<div class="flex sm:hidden items-center gap-2">
+<button class="lang-switcher-btn text-xs font-semibold text-slate-700 p-2 rounded-lg border border-slate-200">
+<i class="fa-solid fa-globe"></i>
+</button>
+<button aria-label="القائمة" class="p-2.5 rounded-xl text-slate-700 hover:bg-slate-100 transition-colors" id="mobile-menu-toggle">
+<i class="fa-solid fa-bars text-xl"></i>
+</button>
+</div>
+</div>
+</div>
+<!-- Mobile Menu Dropdown -->
+<div class="hidden lg:hidden bg-white/98 backdrop-blur-xl border-b border-slate-200 px-4 pt-3 pb-6 space-y-3 shadow-xl" id="mobile-menu-dropdown">
+<div class="flex justify-end">
+<button aria-label="إغلاق" class="p-1.5 text-slate-500 hover:text-slate-800" id="mobile-menu-close">
+<i class="fa-solid fa-xmark text-lg"></i>
+</button>
+</div>
+<a class="block px-3 py-2 rounded-lg text-base font-semibold text-brand-600 bg-brand-50" data-i18n="nav_home" href="index.html">الرئيسية</a>
+<a class="block px-3 py-2 rounded-lg text-base font-medium text-slate-700 hover:bg-slate-100" data-i18n="nav_about" href="about.html">من نحن</a>
+<a class="block px-3 py-2 rounded-lg text-base font-medium text-slate-700 hover:bg-slate-100" data-i18n="nav_products" href="products.html">منتجاتنا</a>
+<a class="block px-3 py-2 rounded-lg text-base font-medium text-slate-700 hover:bg-slate-100" data-i18n="nav_oem" href="oem.html">التصنيع والحلول التعاقدية</a>
+<a class="block px-3 py-2 rounded-lg text-base font-medium text-slate-700 hover:bg-slate-100" data-i18n="nav_careers" href="careers.html">الوظائف</a>
+<a class="block px-3 py-2 rounded-lg text-base font-medium text-slate-700 hover:bg-slate-100" data-i18n="nav_contact" href="contact.html">تواصل معنا</a>
+<div class="pt-2">
+<button class="w-full gradient-primary text-white font-semibold py-3 px-4 rounded-xl shadow-md text-center block" data-i18n="nav_inquire_btn" onclick="openInquiryDrawer()">
+          طلب عرض سعر / عينة
+        </button>
+</div>
+</div>
+</header>
+<!-- HERO SECTION -->
+<section class="relative pt-12 pb-20 md:pt-20 md:pb-28 overflow-hidden gradient-hero">
+<!-- Decorative background elements -->
+<div class="absolute top-0 right-0 w-96 h-96 bg-brand-500/10 rounded-full blur-3xl pointer-events-none -mr-20 -mt-20"></div>
+<div class="absolute bottom-0 left-0 w-80 h-80 bg-emerald-500/10 rounded-full blur-3xl pointer-events-none -ml-20 -mb-20"></div>
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+<!-- Left Content -->
+<div class="lg:col-span-7 space-y-6">
+<div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-semibold bg-brand-100/80 text-brand-800 border border-brand-200 gsap-hero-item">
+<span class="w-2 h-2 rounded-full bg-brand-600 animate-pulse"></span>
+<span data-i18n="hero_badge">صناعة سعودية بمواصفات عالمية منذ 1992</span>
+</div>
+<h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-[2.95rem] font-extrabold text-slate-900 leading-[1.25] tracking-tight gsap-hero-item" data-i18n="hero_title">
+            الريادة في تصنيع المستلزمات الطبية والحلول المخبرية المتقدمة
+          </h1>
+<p class="text-base sm:text-lg text-slate-600 leading-relaxed max-w-2xl gsap-hero-item" data-i18n="hero_subtitle">
+            الشركة المتقدمة الثانية الطبية (سامكو) صرح صناعي رائد في المملكة العربية السعودية، متخصص في تصنيع الأجهزة الطبية، المستلزمات المخبرية، وسائط زراعة الأنسجة والميكروبيولوجي، والبيولوجيا الجزيئية.
+          </p>
+<div class="flex flex-wrap items-center gap-4 pt-2 gsap-hero-item">
+<a class="gradient-primary text-white font-semibold px-7 py-3.5 rounded-xl shadow-lg shadow-sky-600/20 hover:shadow-xl hover:opacity-95 transition-all flex items-center gap-2.5 text-sm sm:text-base" href="products.html">
+<span data-i18n="hero_cta_products">استكشف كتالوج المنتجات</span>
+<i class="fa-solid fa-arrow-left rtl-flip text-xs"></i>
+</a>
+<a class="bg-white hover:bg-slate-50 text-slate-700 font-semibold px-6 py-3.5 rounded-xl border border-slate-200 hover:border-brand-500 shadow-sm transition-all text-sm sm:text-base" data-i18n="hero_cta_contact" href="contact.html">
+              تواصل مع خبرائنا
+            </a>
+</div>
+<!-- Hero Trust Metrics -->
+<div class="grid grid-cols-3 gap-4 pt-6 border-t border-slate-200/80 gsap-hero-item">
+<div class="bg-white/80 backdrop-blur-sm p-4 rounded-xl border border-slate-200/70 shadow-sm">
+<div class="text-2xl font-black text-brand-600" data-i18n="hero_stat_1_num">1992</div>
+<div class="text-xs text-slate-500 font-medium mt-0.5" data-i18n="hero_stat_1_lbl">سنة التأسيس بالرياض</div>
+</div>
+<div class="bg-white/80 backdrop-blur-sm p-4 rounded-xl border border-slate-200/70 shadow-sm">
+<div class="text-2xl font-black text-emerald-600" data-i18n="hero_stat_2_num">100%</div>
+<div class="text-xs text-slate-500 font-medium mt-0.5" data-i18n="hero_stat_2_lbl">صناعة وطنية معتمدة</div>
+</div>
+<div class="bg-white/80 backdrop-blur-sm p-4 rounded-xl border border-slate-200/70 shadow-sm">
+<div class="text-2xl font-black text-slate-800" data-i18n="hero_stat_3_num">ISO 13485</div>
+<div class="text-xs text-slate-500 font-medium mt-0.5" data-i18n="hero_stat_3_lbl">معايير الجودة العالمية</div>
+</div>
+</div>
+</div>
+<!-- Right Hero Visual Showcase -->
+<div class="lg:col-span-5 relative gsap-hero-item">
+<div class="relative mx-auto max-w-md lg:max-w-none">
+<!-- Main Hero Image Frame -->
+<div class="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white bg-slate-900 group">
+<img alt="SAMCO Laboratory Vacuum Blood Tubes" class="w-full h-96 object-cover transition-transform duration-700 group-hover:scale-105" src="./assets/images/products/blood-tubes.jpg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent"></div>
+<div class="absolute bottom-5 right-5 left-5 text-white">
+<span class="inline-flex items-center px-2.5 py-1 rounded text-xs font-semibold bg-brand-600/90 backdrop-blur-sm mb-2">
+<i class="fa-solid fa-flask-vial mr-1.5 ml-1.5"></i> Precision Medical Manufacturing
+                </span>
+<p class="text-sm text-slate-200 font-medium">Cleanroom Class 10,000 / ISO 7 Sterile Production</p>
+</div>
+</div>
+<!-- Floating Top Card -->
+<div class="absolute -top-6 -right-6 bg-white/95 backdrop-blur-md p-4 rounded-2xl shadow-xl border border-slate-100 flex items-center gap-3 animate-float">
+<div class="w-12 h-12 rounded-xl bg-brand-50 flex items-center justify-center text-brand-600 text-xl">
+<i class="fa-solid fa-certificate"></i>
+</div>
+<div>
+<div class="text-xs font-semibold text-slate-500">Saudi FDA Approved</div>
+<div class="text-sm font-bold text-slate-900">شهادة تسجيل طبية</div>
+</div>
+</div>
+<!-- Floating Vision 2030 Badge -->
+<div class="absolute -bottom-6 -left-6 bg-white/95 backdrop-blur-md p-3.5 rounded-2xl shadow-xl border border-slate-100 flex items-center gap-3">
+<img alt="Saudi Vision 2030" class="h-10 w-auto" src="./assets/images/Saudi_Vision_2030_logo.svg.png"/>
+<div class="text-xs font-bold text-slate-800 leading-tight">
+                داعم وطني رئيسي<br/><span class="text-brand-600 font-medium">لرؤية المملكة 2030</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SAUDI VISION 2030 SECTION -->
+<section class="py-16 md:py-24 bg-white border-y border-slate-200/80">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+<!-- Vision Left Header -->
+<div class="lg:col-span-5 space-y-4">
+<div class="flex items-center gap-3">
+<img alt="Saudi Vision 2030" class="h-14 w-auto object-contain" src="./assets/images/Saudi_Vision_2030_logo.svg.png"/>
+<span class="text-xs font-bold uppercase tracking-wider text-brand-600 px-3 py-1 bg-brand-50 rounded-full border border-brand-200" data-i18n="vision_badge">رؤية المملكة 2030</span>
+</div>
+<h2 class="text-2xl sm:text-3xl font-bold text-slate-900 leading-snug" data-i18n="vision_title">
+            شريك وطني فاعل في تحقيق مستهدفات رؤية 2030
+          </h2>
+<p class="text-sm sm:text-base text-slate-600 leading-relaxed" data-i18n="vision_desc">
+            نحن نؤمن برؤية المملكة 2030 ونهدف إلى المساهمة في أهدافها. نسعى إلى تعزيز الاقتصاد الوطني وتنويعه من خلال تقديم منتجات عالية الجودة وتطوير التقنيات المحلية.
+          </p>
+</div>
+<!-- 3 Pillars Cards -->
+<div class="lg:col-span-7 grid grid-cols-1 md:grid-cols-3 gap-5">
+<!-- Pillar 1 -->
+<div class="glass-card glass-card-hover p-6 rounded-2xl border border-slate-200/80 flex flex-col justify-between">
+<div>
+<div class="w-12 h-12 rounded-xl bg-sky-50 text-brand-600 flex items-center justify-center text-xl mb-4">
+<i class="fa-solid fa-industry"></i>
+</div>
+<h3 class="text-base font-bold text-slate-900 mb-2" data-i18n="vision_pillar_1_title">تطوير الصناعات الوطنية</h3>
+<p class="text-xs text-slate-600 leading-relaxed" data-i18n="vision_pillar_1_desc">نقل وتوطين أحدث تقنيات التصنيع الطبي الدقيق ورفع المحتوى المحلي في قطاع الرعاية الصحية.</p>
+</div>
+<div class="mt-4 pt-3 border-t border-slate-100 text-[11px] text-brand-600 font-semibold flex items-center gap-1">
+<span>توطين التقنية</span> <i class="fa-solid fa-check text-xs"></i>
+</div>
+</div>
+<!-- Pillar 2 -->
+<div class="glass-card glass-card-hover p-6 rounded-2xl border border-slate-200/80 flex flex-col justify-between">
+<div>
+<div class="w-12 h-12 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center text-xl mb-4">
+<i class="fa-solid fa-chart-line-up"></i>
+</div>
+<h3 class="text-base font-bold text-slate-900 mb-2" data-i18n="vision_pillar_2_title">تعزيز الاقتصاد الوطني</h3>
+<p class="text-xs text-slate-600 leading-relaxed" data-i18n="vision_pillar_2_desc">المساهمة في تحقيق الاكتفاء الذاتي والتصدير للأسواق الإقليمية والدولية لدعم تنويع مصادر الدخل.</p>
+</div>
+<div class="mt-4 pt-3 border-t border-slate-100 text-[11px] text-emerald-600 font-semibold flex items-center gap-1">
+<span>تصدير إقليمي</span> <i class="fa-solid fa-check text-xs"></i>
+</div>
+</div>
+<!-- Pillar 3 -->
+<div class="glass-card glass-card-hover p-6 rounded-2xl border border-slate-200/80 flex flex-col justify-between">
+<div>
+<div class="w-12 h-12 rounded-xl bg-amber-50 text-amber-600 flex items-center justify-center text-xl mb-4">
+<i class="fa-solid fa-award"></i>
+</div>
+<h3 class="text-base font-bold text-slate-900 mb-2" data-i18n="vision_pillar_3_title">جودة استثنائية بأسعار منافسة</h3>
+<p class="text-xs text-slate-600 leading-relaxed" data-i18n="vision_pillar_3_desc">توفير حلول طبية معقمة تضاهي المعايير الأوروبية والأمريكية بأعلى درجات الموثوقية والقيمة.</p>
+</div>
+<div class="mt-4 pt-3 border-t border-slate-100 text-[11px] text-amber-600 font-semibold flex items-center gap-1">
+<span>كفاءة التكلفة</span> <i class="fa-solid fa-check text-xs"></i>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- KEY METRICS COUNTERS -->
+<section class="py-14 bg-brand-navy text-white relative overflow-hidden">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+<div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center divide-y md:divide-y-0 md:divide-x md:rtl:divide-x-reverse divide-slate-700/60">
+<div class="pt-4 md:pt-0">
+<div class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-sky-400 stat-counter-val" data-suffix="+" data-target="150">150+</div>
+<p class="text-xs sm:text-sm text-slate-300 font-medium mt-2" data-i18n="counter_1_title">خبراء ومتخصصون طبيون</p>
+</div>
+<div class="pt-4 md:pt-0">
+<div class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-emerald-400 stat-counter-val" data-suffix="+" data-target="500">500+</div>
+<p class="text-xs sm:text-sm text-slate-300 font-medium mt-2" data-i18n="counter_2_title">عملاء وشركاء نجاح</p>
+</div>
+<div class="pt-4 md:pt-0">
+<div class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-amber-400 stat-counter-val" data-suffix="+" data-target="120">120+</div>
+<p class="text-xs sm:text-sm text-slate-300 font-medium mt-2" data-i18n="counter_3_title">منتجاً طبياً مطوراً</p>
+</div>
+<div class="pt-4 md:pt-0">
+<div class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-purple-400 stat-counter-val" data-suffix="M+" data-target="25">25M+</div>
+<p class="text-xs sm:text-sm text-slate-300 font-medium mt-2" data-i18n="counter_4_title">وحدة معقمة منتجة سنوياً</p>
+</div>
+</div>
+</div>
+</section>
+<!-- WHY SAMCO & VALUES -->
+<section class="py-16 md:py-24 bg-slate-50">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="text-center max-w-3xl mx-auto mb-16">
+<span class="text-xs font-bold uppercase tracking-wider text-brand-600 px-3 py-1 bg-brand-100/70 rounded-full" data-i18n="why_badge">لماذا تختار سامكو؟</span>
+<h2 class="text-2xl sm:text-3xl md:text-4xl font-extrabold text-slate-900 mt-3" data-i18n="why_title">قيمنا الراسخة ومحركات تميزنا</h2>
+<p class="text-sm text-slate-600 mt-3">نلتزم بتقديم أعلى المعايير الأخلاقية والصناعية لخدمة القطاع الصحي في المملكة.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Value 1 -->
+<div class="glass-card glass-card-hover p-6 rounded-2xl border border-slate-200/80 bg-white">
+<div class="w-12 h-12 rounded-xl bg-brand-50 text-brand-600 flex items-center justify-center text-xl mb-4">
+<i class="fa-solid fa-gem"></i>
+</div>
+<h3 class="text-base font-bold text-slate-900 mb-2" data-i18n="why_val_1_title">التميز في الجودة</h3>
+<p class="text-xs text-slate-600 leading-relaxed" data-i18n="why_val_1_desc">التزام صارم بنظم إدارة الجودة والتحكم الإحصائي في كل مرحلة تصنيعية من المواد الخام حتى المنتج النهائي.</p>
+</div>
+<!-- Value 2 -->
+<div class="glass-card glass-card-hover p-6 rounded-2xl border border-slate-200/80 bg-white">
+<div class="w-12 h-12 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center text-xl mb-4">
+<i class="fa-solid fa-hand-holding-heart"></i>
+</div>
+<h3 class="text-base font-bold text-slate-900 mb-2" data-i18n="why_val_2_title">أخلاقيات العمل والمسؤولية</h3>
+<p class="text-xs text-slate-600 leading-relaxed" data-i18n="why_val_2_desc">العمل بنزاهة وشفافية ودعم المبادرات الصحية المجتمعية في كافة أرجاء المملكة.</p>
+</div>
+<!-- Value 3 -->
+<div class="glass-card glass-card-hover p-6 rounded-2xl border border-slate-200/80 bg-white">
+<div class="w-12 h-12 rounded-xl bg-purple-50 text-purple-600 flex items-center justify-center text-xl mb-4">
+<i class="fa-solid fa-microscope"></i>
+</div>
+<h3 class="text-base font-bold text-slate-900 mb-2" data-i18n="why_val_3_title">الاعتماد على البحث والتطوير</h3>
+<p class="text-xs text-slate-600 leading-relaxed" data-i18n="why_val_3_desc">مختبرات R&amp;D متقدمة تعمل على ابتكار وتطوير أوساط زراعية ومحاليل متطورة تلائم البيئة الميكروبية المحلية.</p>
+</div>
+<!-- Value 4 -->
+<div class="glass-card glass-card-hover p-6 rounded-2xl border border-slate-200/80 bg-white">
+<div class="w-12 h-12 rounded-xl bg-amber-50 text-amber-600 flex items-center justify-center text-xl mb-4">
+<i class="fa-solid fa-bullseye"></i>
+</div>
+<h3 class="text-base font-bold text-slate-900 mb-2" data-i18n="why_val_4_title">نجاحك هو هدفنا</h3>
+<p class="text-xs text-slate-600 leading-relaxed" data-i18n="why_val_4_desc">بناء شراكات مستدامة مع القطاعات الحكومية والمستشفيات الخاصة والمختبرات المرجعية لتلبية متطلباتهم بدقة.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- PRODUCT CATEGORIES SHOWCASE -->
+<section class="py-16 md:py-24 bg-white">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+<div>
+<span class="text-xs font-bold uppercase tracking-wider text-brand-600 px-3 py-1 bg-brand-50 rounded-full" data-i18n="prod_preview_badge">حلول شاملة متكاملة</span>
+<h2 class="text-2xl sm:text-3xl md:text-4xl font-extrabold text-slate-900 mt-2" data-i18n="prod_preview_title">فئات منتجات سامكو المعتمدة</h2>
+</div>
+<a class="mt-4 md:mt-0 inline-flex items-center text-sm font-semibold text-brand-600 hover:text-brand-700 gap-1" href="products.html">
+<span>عرض جميع المنتجات في الكتالوج</span>
+<i class="fa-solid fa-arrow-left rtl-flip text-xs"></i>
+</a>
+</div>
+<!-- 5 Category Cards -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+<!-- Cat 1: Microbiology -->
+<div class="glass-card glass-card-hover rounded-2xl overflow-hidden border border-slate-200 flex flex-col justify-between">
+<div class="h-48 overflow-hidden relative">
+<img alt="Microbiology Media" class="w-full h-full object-cover" src="./assets/images/products/culture-media.jpg"/>
+<span class="absolute top-3 right-3 px-2.5 py-1 rounded bg-white/90 text-[11px] font-bold text-brand-800 backdrop-blur-sm">Class 100 Sterile</span>
+</div>
+<div class="p-6 flex-1 flex flex-col justify-between">
+<div>
+<h3 class="text-base font-bold text-slate-900 mb-2" data-i18n="cat_micro_title">الميكروبيولوجي وأوساط الزراعة</h3>
+<p class="text-xs text-slate-600 leading-relaxed mb-4" data-i18n="cat_micro_desc">أطباق آغار بالدم، ماكونكي، وتشوكليت آغار جاهزة ومفرغة من الهواء ومطابقة لأعلى درجات النقاء.</p>
+</div>
+<a class="inline-flex items-center text-xs font-bold text-brand-600 hover:text-brand-800" data-i18n="footer_cat_microbiology" href="products.html?cat=microbiology">
+<span>تصفح المنتجات</span> <i class="fa-solid fa-arrow-left rtl-flip mr-1 ml-1 text-[10px]"></i>
+</a>
+</div>
+</div>
+<!-- Cat 2: Blood Collection Tubes -->
+<div class="glass-card glass-card-hover rounded-2xl overflow-hidden border border-slate-200 flex flex-col justify-between">
+<div class="h-48 overflow-hidden relative">
+<img alt="Blood Collection Tubes" class="w-full h-full object-cover" src="./assets/images/products/blood-tubes.jpg"/>
+<span class="absolute top-3 right-3 px-2.5 py-1 rounded bg-white/90 text-[11px] font-bold text-brand-800 backdrop-blur-sm">Vacuum PET</span>
+</div>
+<div class="p-6 flex-1 flex flex-col justify-between">
+<div>
+<h3 class="text-base font-bold text-slate-900 mb-2" data-i18n="cat_tubes_title">أنابيب سحب الدم المخبرية</h3>
+<p class="text-xs text-slate-600 leading-relaxed mb-4" data-i18n="cat_tubes_desc">أنابيب مفرغة بأنواعها (EDTA، السيروم، سترات الصوديوم، الجل العازل) بمقاسات دقيقة وأغطية أمان.</p>
+</div>
+<a class="inline-flex items-center text-xs font-bold text-brand-600 hover:text-brand-800" data-i18n="footer_cat_blood-tubes" href="products.html?cat=blood-tubes">
+<span>تصفح المنتجات</span> <i class="fa-solid fa-arrow-left rtl-flip mr-1 ml-1 text-[10px]"></i>
+</a>
+</div>
+</div>
+<!-- Cat 3: Lab Plasticware -->
+<div class="glass-card glass-card-hover rounded-2xl overflow-hidden border border-slate-200 flex flex-col justify-between">
+<div class="h-48 overflow-hidden relative">
+<img alt="Laboratory Plasticware" class="w-full h-full object-cover" src="./assets/images/products/lab-plasticware.jpg"/>
+<span class="absolute top-3 right-3 px-2.5 py-1 rounded bg-white/90 text-[11px] font-bold text-brand-800 backdrop-blur-sm">Autoclavable PP</span>
+</div>
+<div class="p-6 flex-1 flex flex-col justify-between">
+<div>
+<h3 class="text-base font-bold text-slate-900 mb-2" data-i18n="cat_plastic_title">المستلزمات والبلاستيكيات المخبرية</h3>
+<p class="text-xs text-slate-600 leading-relaxed mb-4" data-i18n="cat_plastic_desc">أنابيب طرد مركزي 15 و 50 مل، رؤوس ماصات بفلتر، وحاويات عينات مانعة للتسرب معقمة.</p>
+</div>
+<a class="inline-flex items-center text-xs font-bold text-brand-600 hover:text-brand-800" data-i18n="footer_cat_laboratory-plasticware" href="products.html?cat=laboratory-plasticware">
+<span>تصفح المنتجات</span> <i class="fa-solid fa-arrow-left rtl-flip mr-1 ml-1 text-[10px]"></i>
+</a>
+</div>
+</div>
+<!-- Cat 4: Specimen Collection & Swabs -->
+<div class="glass-card glass-card-hover rounded-2xl overflow-hidden border border-slate-200 flex flex-col justify-between">
+<div class="h-48 overflow-hidden relative">
+<img alt="Specimen Swabs" class="w-full h-full object-cover" src="./assets/images/products/specimen-swabs.jpg"/>
+<span class="absolute top-3 right-3 px-2.5 py-1 rounded bg-white/90 text-[11px] font-bold text-brand-800 backdrop-blur-sm">VTM &amp; Flocked</span>
+</div>
+<div class="p-6 flex-1 flex flex-col justify-between">
+<div>
+<h3 class="text-base font-bold text-slate-900 mb-2" data-i18n="cat_swabs_title">مسحات وأدوات جمع العينات</h3>
+<p class="text-xs text-slate-600 leading-relaxed mb-4" data-i18n="cat_swabs_desc">أطقم وسط النقل الفيروسي VTM ومسحات نايلون قطيعية فائقة النعومة مع نقاط كسر مسبقة الصب.</p>
+</div>
+<a class="inline-flex items-center text-xs font-bold text-brand-600 hover:text-brand-800" data-i18n="footer_cat_specimen-collection" href="products.html?cat=specimen-collection">
+<span>تصفح المنتجات</span> <i class="fa-solid fa-arrow-left rtl-flip mr-1 ml-1 text-[10px]"></i>
+</a>
+</div>
+</div>
+<!-- Cat 5: Molecular Science -->
+<div class="glass-card glass-card-hover rounded-2xl overflow-hidden border border-slate-200 flex flex-col justify-between">
+<div class="h-48 overflow-hidden relative">
+<img alt="Molecular Buffers" class="w-full h-full object-cover" src="./assets/images/products/molecular-buffers.jpg"/>
+<span class="absolute top-3 right-3 px-2.5 py-1 rounded bg-white/90 text-[11px] font-bold text-brand-800 backdrop-blur-sm">DNase/RNase Free</span>
+</div>
+<div class="p-6 flex-1 flex flex-col justify-between">
+<div>
+<h3 class="text-base font-bold text-slate-900 mb-2" data-i18n="cat_mol_title">البيولوجيا الجزيئية والمحاليل</h3>
+<p class="text-xs text-slate-600 leading-relaxed mb-4" data-i18n="cat_mol_desc">محاليل تكسير الخلايا LB-1، محلول TE المنظم، ومركبات تفاعل PCR عالية الحساسية.</p>
+</div>
+<a class="inline-flex items-center text-xs font-bold text-brand-600 hover:text-brand-800" data-i18n="footer_cat_molecular-science" href="products.html?cat=molecular-science">
+<span>تصفح المنتجات</span> <i class="fa-solid fa-arrow-left rtl-flip mr-1 ml-1 text-[10px]"></i>
+</a>
+</div>
+</div>
+<!-- OEM Promo Card -->
+<div class="glass-card-dark rounded-2xl p-6 text-white flex flex-col justify-between relative overflow-hidden">
+<div class="relative z-10">
+<span class="inline-flex items-center px-2 py-0.5 rounded text-[10px] font-bold bg-sky-500/30 text-sky-300 border border-sky-400/30 mb-3">OEM Solutions</span>
+<h3 class="text-lg font-bold mb-2">تصنيع طبي خاص لحساب الغير</h3>
+<p class="text-xs text-slate-300 leading-relaxed mb-4">نصنع منتجاتك الطبية وفقاً لمعاييرك الخاصة وبعلامتك التجارية في غرف معقمة Class 10,000.</p>
+</div>
+<a class="relative z-10 py-2.5 px-4 rounded-xl bg-sky-600 hover:bg-sky-500 text-white text-xs font-semibold text-center transition-colors" href="oem.html">
+            استكشف قدرات التصنيع
+          </a>
+</div>
+</div>
+</div>
+</section>
+<!-- OEM & CLEANROOM MANUFACTURING BANNER -->
+<section class="py-16 bg-slate-900 text-white relative overflow-hidden">
+<div class="absolute inset-0 opacity-20">
+<img alt="SAMCO Cleanrooms" class="w-full h-full object-cover" src="./assets/images/section2-.png"/>
+</div>
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+<div class="lg:col-span-8 space-y-4">
+<span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-sky-500/20 text-sky-300 border border-sky-500/30" data-i18n="oem_badge">خدمات التصنيع التعاقدي</span>
+<h2 class="text-2xl sm:text-3xl md:text-4xl font-extrabold text-white" data-i18n="oem_title">شريكك الموثوق في التصنيع لحساب الغير (OEM)</h2>
+<p class="text-sm sm:text-base text-slate-300 max-w-3xl leading-relaxed" data-i18n="oem_desc">
+            نمتلك بنية تحتية تصنيعية فائقة التطور تضم غرفاً نظيفة Class 10,000 / ISO 7 وخطوط حقن قوالب بلاستيكية طبية دقيقة لدعم علامتك التجارية.
+          </p>
+<div class="flex flex-wrap gap-4 pt-2">
+<span class="text-xs text-slate-200 flex items-center gap-1.5"><i class="fa-solid fa-check text-sky-400"></i> تصميم القوالب الطبية</span>
+<span class="text-xs text-slate-200 flex items-center gap-1.5"><i class="fa-solid fa-check text-sky-400"></i> التعبئة المعقمة Aseptic Filling</span>
+<span class="text-xs text-slate-200 flex items-center gap-1.5"><i class="fa-solid fa-check text-sky-400"></i> مطابقة متطلبات SFDA و CE</span>
+</div>
+</div>
+<div class="lg:col-span-4 flex justify-start lg:justify-end">
+<button class="gradient-primary text-white font-bold py-3.5 px-8 rounded-xl shadow-xl hover:opacity-95 transition-all text-sm sm:text-base whitespace-nowrap" data-i18n="oem_btn" onclick="openInquiryDrawer('OEM-SERVICE', 'OEM Contract Manufacturing')">
+            اطلب تصنيع خاص أو عينات
+          </button>
+</div>
+</div>
+</div>
+</section>
+<!-- SUCCESS PARTNERS CAROUSEL / LOGOS -->
+<section class="py-16 md:py-20 bg-white">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="text-center max-w-2xl mx-auto mb-12">
+<span class="text-xs font-bold uppercase tracking-wider text-brand-600 px-3 py-1 bg-brand-50 rounded-full" data-i18n="partners_badge">شركاء النجاح</span>
+<h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mt-2" data-i18n="partners_title">نحظى بثقة أكبر الصروح الصحية والجهات الحكومية</h2>
+</div>
+<div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-8 items-center justify-items-center">
+<!-- Ministry of Health -->
+<div class="partner-logo-item flex flex-col items-center">
+<img alt="وزارة الصحة" class="h-16 w-auto object-contain" src="./assets/images/Saudi_Ministry_of_Health_Logo.svg.png"/>
+<span class="text-[11px] text-slate-500 font-medium mt-2">وزارة الصحة</span>
+</div>
+<!-- Ministry of Defense -->
+<div class="partner-logo-item flex flex-col items-center">
+<img alt="وزارة الدفاع" class="h-16 w-auto object-contain" src="./assets/images/Ministry_of_Defense_Logo.svg.png"/>
+<span class="text-[11px] text-slate-500 font-medium mt-2">وزارة الدفاع</span>
+</div>
+<!-- King Faisal Specialist Hospital -->
+<div class="partner-logo-item flex flex-col items-center">
+<img alt="مستشفى الملك فيصل التخصصي" class="h-14 w-auto object-contain" src="./assets/images/king-faisal-hospital.png"/>
+<span class="text-[11px] text-slate-500 font-medium mt-2">مستشفى الملك فيصل</span>
+</div>
+<!-- Dr. Sulaiman Al Habib -->
+<div class="partner-logo-item flex flex-col items-center">
+<img alt="مستشفيات الدكتور سليمان الحبيب" class="h-14 w-auto object-contain" src="./assets/images/habib-hospital.png"/>
+<span class="text-[11px] text-slate-500 font-medium mt-2">مجموعة د. الحبيب</span>
+</div>
+<!-- NUPCO -->
+<div class="partner-logo-item flex flex-col items-center">
+<img alt="نوبكو NUPCO" class="h-12 w-auto object-contain" src="./assets/images/nupco.png"/>
+<span class="text-[11px] text-slate-500 font-medium mt-2">الشركة الوطنية نوبكو</span>
+</div>
+<!-- Public Health Authority -->
+<div class="partner-logo-item flex flex-col items-center">
+<img alt="هيئة الصحة العامة" class="h-14 w-auto object-contain" src="./assets/images/public-health-authority.png"/>
+<span class="text-[11px] text-slate-500 font-medium mt-2">هيئة الصحة العامة</span>
+</div>
+</div>
+</div>
+</section>
+<!-- CALL TO ACTION SECTION -->
+<section class="py-16 bg-gradient-to-r from-brand-700 via-brand-600 to-sky-600 text-white relative">
+<div class="max-w-5xl mx-auto px-4 text-center space-y-6">
+<h2 class="text-2xl sm:text-3xl md:text-4xl font-extrabold">هل تحتاج إلى استشارة فنية أو توريد مستلزمات طبية معقمة؟</h2>
+<p class="text-sm sm:text-base text-sky-100 max-w-2xl mx-auto">فريق المبيعات الطبية والهندسية في سامكو جاهز لخدمتك وتوفير العينات وعروض الأسعار التنافسية بأعلى معايير الدقة.</p>
+<div class="flex flex-wrap justify-center gap-4 pt-2">
+<button class="bg-white text-brand-700 font-bold px-7 py-3.5 rounded-xl shadow-lg hover:bg-slate-50 transition-all text-sm sm:text-base flex items-center gap-2" onclick="openInquiryDrawer()">
+<i class="fa-solid fa-envelope-open-text"></i>
+<span data-i18n="nav_inquire_btn">طلب عرض سعر / عينة</span>
+</button>
+<a class="bg-brand-900/60 hover:bg-brand-900 text-white font-semibold px-6 py-3.5 rounded-xl border border-white/20 transition-all text-sm sm:text-base flex items-center gap-2" href="tel:00966114889311">
+<i class="fa-solid fa-phone"></i>
+<span dir="ltr">00966114889311</span>
+</a>
+</div>
+</div>
+</section>
+<!-- FOOTER -->
+<footer class="bg-slate-950 text-slate-400 text-xs pt-16 pb-12 border-t border-slate-800">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 pb-12 border-b border-slate-800/80">
+<!-- Col 1: About SAMCO -->
+<div class="lg:col-span-5 space-y-4">
+<img alt="SAMCO Logo" class="h-10 w-auto object-contain" src="./assets/images/samco-white-logo.webp"/>
+<p class="text-slate-400 leading-relaxed text-xs pr-4" data-i18n="footer_about">
+            الشركة المتقدمة الثانية الطبية هي شركة صناعية سعودية تأسست عام 1992. وهي واحدة من الشركات الرائدة في المملكة متخصصة في صناعة شريحة واسعة من المنتجات الطبية والمخبرية ووسائط الزراعة والبيولوجيا الجزيئية.
+          </p>
+<div class="flex items-center gap-3 pt-2">
+<span class="inline-flex items-center px-2.5 py-1 rounded bg-slate-900 text-slate-300 border border-slate-800 text-[11px] font-medium">
+<i class="fa-solid fa-certificate text-brand-500 mr-1.5 ml-1.5"></i> ISO 13485:2016
+            </span>
+<span class="inline-flex items-center px-2.5 py-1 rounded bg-slate-900 text-slate-300 border border-slate-800 text-[11px] font-medium">
+<i class="fa-solid fa-check-double text-emerald-500 mr-1.5 ml-1.5"></i> SFDA Registered
+            </span>
+</div>
+</div>
+<!-- Col 2: Quick Links -->
+<div class="lg:col-span-2 space-y-3">
+<h4 class="text-sm font-bold text-white uppercase tracking-wider" data-i18n="footer_quick_links">روابط سريعة</h4>
+<ul class="space-y-2 text-slate-400">
+<li><a class="hover:text-white transition-colors" data-i18n="nav_home" href="index.html">الرئيسية</a></li>
+<li><a class="hover:text-white transition-colors" data-i18n="nav_about" href="about.html">من نحن</a></li>
+<li><a class="hover:text-white transition-colors" data-i18n="nav_products" href="products.html">منتجاتنا</a></li>
+<li><a class="hover:text-white transition-colors" data-i18n="nav_oem" href="oem.html">التصنيع والحلول التعاقدية</a></li>
+<li><a class="hover:text-white transition-colors" data-i18n="nav_careers" href="careers.html">الوظائف</a></li>
+<li><a class="hover:text-white transition-colors" data-i18n="nav_contact" href="contact.html">تواصل معنا</a></li>
+</ul>
+</div>
+<!-- Col 3: Products Categories -->
+<div class="lg:col-span-2 space-y-3">
+<h4 class="text-sm font-bold text-white uppercase tracking-wider" data-i18n="footer_products_title">أقسام المنتجات</h4>
+<ul class="space-y-2 text-slate-400">
+<li><a class="hover:text-white transition-colors" data-i18n="footer_cat_microbiology" href="products.html?cat=microbiology">الميكروبيولوجي</a></li>
+<li><a class="hover:text-white transition-colors" data-i18n="footer_cat_blood-tubes" href="products.html?cat=blood-tubes">أنابيب سحب الدم</a></li>
+<li><a class="hover:text-white transition-colors" data-i18n="footer_cat_laboratory-plasticware" href="products.html?cat=laboratory-plasticware">بلاستيكيات مخبرية</a></li>
+<li><a class="hover:text-white transition-colors" data-i18n="footer_cat_specimen-collection" href="products.html?cat=specimen-collection">مسحات وجمع العينات</a></li>
+<li><a class="hover:text-white transition-colors" data-i18n="footer_cat_molecular-science" href="products.html?cat=molecular-science">البيولوجيا الجزيئية</a></li>
+</ul>
+</div>
+<!-- Col 4: Contact Information -->
+<div class="lg:col-span-3 space-y-3">
+<h4 class="text-sm font-bold text-white uppercase tracking-wider" data-i18n="footer_contact_title">بيانات التواصل</h4>
+<ul class="space-y-2.5 text-slate-400">
+<li class="flex items-start gap-2">
+<i class="fa-solid fa-location-dot text-brand-500 mt-1"></i>
+<span data-i18n="top_location">المملكة العربية السعودية – الرياض 11383</span>
+</li>
+<li class="flex items-center gap-2">
+<i class="fa-solid fa-phone text-brand-500"></i>
+<a class="hover:text-white transition-colors" dir="ltr" href="tel:00966114889311">00966114889311</a>
+</li>
+<li class="flex items-center gap-2">
+<i class="fa-solid fa-envelope text-brand-500"></i>
+<a class="hover:text-white transition-colors" href="mailto:info@adv2-medical.com">info@adv2-medical.com</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="pt-8 flex flex-col md:flex-row justify-between items-center text-slate-500 text-[11px] gap-4">
+<p data-i18n="footer_rights">جميع الحقوق محفوظة © 2026 الشركة المتقدمة الثانية الطبية (سامكو) SAMCO.</p>
+<p data-i18n="footer_vision_sub">صناعة وطنية تدعم رؤية 2030 وتخدم منظومة الرعاية الصحية.</p>
+</div>
+</div>
+</footer>
+<!-- GLOBAL INQUIRY / QUOTE MODAL DRAWER -->
+<div class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-50 drawer-backdrop" id="inquiry-drawer-backdrop">
+<div aria-label="طلب عرض سعر" aria-modal="true" class="fixed top-0 bottom-0 right-0 w-full max-w-lg bg-white shadow-2xl p-6 sm:p-8 overflow-y-auto drawer-content flex flex-col justify-between" id="inquiry-drawer" role="dialog" tabindex="-1">
+<div>
+<div class="flex justify-between items-center pb-4 border-b border-slate-100">
+<div>
+<h3 class="text-lg font-bold text-slate-900" data-i18n="drawer_title">طلب عرض سعر أو عينة</h3>
+<p class="text-xs text-slate-500" data-i18n="drawer_subtitle">فريقنا الهندسي والطبي سيتواصل معك خلال أقل من 24 ساعة عمل.</p>
+</div>
+<button aria-label="إغلاق" class="p-2 rounded-lg text-slate-400 hover:text-slate-700 hover:bg-slate-100 transition-colors" id="close-inquiry-drawer">
+<i class="fa-solid fa-xmark text-lg"></i>
+</button>
+</div>
+
+<form class="mt-6 space-y-4" id="inquiry-form"><p class="local-form-note" data-i18n="local_notice">يُحفظ الطلب على جهازك فقط، ولا يُرسل إلى الشركة.</p>
+<div>
+<label class="block text-xs font-semibold text-slate-700 mb-1" data-i18n="form_name" for="inquiry-form-field-0">الاسم الكامل *</label>
+<input class="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-xs focus:ring-2 focus:ring-brand-500 focus:border-brand-500 outline-none transition-all" data-i18n-ph="form_name_ph" id="inquiry-form-field-0" name="inquiry-form-field-0" placeholder="مثال: د. عبدالله التميمي" required="" type="text"/>
+</div>
+<div>
+<label class="block text-xs font-semibold text-slate-700 mb-1" data-i18n="form_org" for="inquiry-form-field-1">الجهة / المستشفى / الشركة *</label>
+<input class="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-xs focus:ring-2 focus:ring-brand-500 focus:border-brand-500 outline-none transition-all" data-i18n-ph="form_org_ph" id="inquiry-form-field-1" name="inquiry-form-field-1" placeholder="اسم المنشأة الطبية أو المختبر" required="" type="text"/>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+<div>
+<label class="block text-xs font-semibold text-slate-700 mb-1" data-i18n="form_email" for="inquiry-form-field-2">البريد الإلكتروني *</label>
+<input class="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-xs focus:ring-2 focus:ring-brand-500 focus:border-brand-500 outline-none transition-all" id="inquiry-form-field-2" name="inquiry-form-field-2" placeholder="name@domain.com" required="" type="email"/>
+</div>
+<div>
+<label class="block text-xs font-semibold text-slate-700 mb-1" data-i18n="form_phone" for="inquiry-form-field-3">رقم الهاتف / الجوال *</label>
+<input class="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-xs focus:ring-2 focus:ring-brand-500 focus:border-brand-500 outline-none transition-all" id="inquiry-form-field-3" name="inquiry-form-field-3" placeholder="+966 5X XXX XXXX" required="" type="tel"/>
+</div>
+</div>
+<div>
+<label class="block text-xs font-semibold text-slate-700 mb-1" data-i18n="form_product" for="drawer-form-product">المنتج أو الفئة المستهدفة</label>
+<input class="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-xs bg-slate-50 focus:ring-2 focus:ring-brand-500 focus:border-brand-500 outline-none transition-all" id="drawer-form-product" name="drawer-form-product" placeholder="اختر منتجاً أو أكتب اسم المنتج" type="text"/>
+</div>
+<div>
+<label class="block text-xs font-semibold text-slate-700 mb-1" data-i18n="form_quantity" for="inquiry-form-field-5">الكمية التقديرية المطلوبة</label>
+<input class="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-xs focus:ring-2 focus:ring-brand-500 focus:border-brand-500 outline-none transition-all" data-i18n-ph="form_quantity_ph" id="inquiry-form-field-5" name="inquiry-form-field-5" placeholder="مثال: 5,000 قطعة / شهرياً" type="text"/>
+</div>
+<div>
+<label class="block text-xs font-semibold text-slate-700 mb-1" data-i18n="form_notes" for="inquiry-form-field-6">تفاصيل إضافية أو مواصفات خاصة</label>
+<textarea class="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-xs focus:ring-2 focus:ring-brand-500 focus:border-brand-500 outline-none transition-all resize-none" data-i18n-ph="form_notes_ph" id="inquiry-form-field-6" name="inquiry-form-field-6" placeholder="أكتب استفسارك أو المواصفات الفنية المطلوبة..." rows="3"></textarea>
+</div>
+<div class="pt-2">
+<button class="w-full gradient-primary text-white font-semibold py-3 px-4 rounded-xl shadow-md hover:shadow-lg hover:opacity-95 transition-all text-xs" data-i18n="local_save" type="submit">تنزيل الطلب على جهازي</button>
+</div>
+</form>
+</div>
+<div class="pt-6 border-t border-slate-100 text-center text-[11px] text-slate-400">
+<i class="fa-solid fa-lock mr-1 ml-1 text-slate-400"></i> بياناتك مشفرة ومحمية وفق أعلى معايير الخصوصية
+      </div>
+</div>
+</div>
+<!-- QUICK VIEW PRODUCT MODAL -->
+<div aria-label="تفاصيل المنتج" aria-modal="true" class="hidden fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-50 flex items-center justify-center p-4" id="quick-view-modal" role="dialog" tabindex="-1">
+<div class="bg-white rounded-2xl max-w-2xl w-full shadow-2xl overflow-hidden border border-slate-200 flex flex-col md:flex-row">
+<div class="md:w-1/2 bg-slate-100 relative h-64 md:h-auto">
+<img alt="Product" class="w-full h-full object-cover" id="qv-img" src=""/>
+<span class="absolute top-3 right-3 px-2.5 py-1 rounded bg-white/95 text-xs font-bold text-slate-800 shadow-sm" id="qv-sku"></span>
+</div>
+<div class="md:w-1/2 p-6 flex flex-col justify-between">
+<div>
+<div class="flex justify-between items-start mb-2">
+<span class="text-xs font-semibold text-brand-600" id="qv-category"></span>
+<button aria-label="إغلاق" class="text-slate-400 hover:text-slate-700" id="quick-view-close">
+<i class="fa-solid fa-xmark text-lg"></i>
+</button>
+</div>
+<h3 class="text-lg font-bold text-slate-900 mb-2 leading-snug" id="qv-title"></h3>
+<p class="text-xs text-slate-600 mb-4 leading-relaxed" id="qv-desc"></p>
+<h4 class="text-xs font-bold text-slate-800 mb-2">المواصفات الفنية:</h4>
+<ul class="space-y-1 mb-4" id="qv-specs"></ul>
+<div class="flex flex-wrap gap-1.5 mb-6" id="qv-certs"></div>
+</div>
+<button class="w-full gradient-primary text-white font-bold py-2.5 px-4 rounded-xl text-xs shadow hover:opacity-95 transition-all" id="qv-inquire-btn">
+<i class="fa-solid fa-paper-plane mr-1.5 ml-1.5"></i> طلب عرض سعر لهذا المنتج
+        </button>
+</div>
+</div>
+</div>
+<!-- SCRIPTS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="./assets/js/products-data.js"></script>
+<script src="./assets/js/translations.js"></script>
+<script src="./assets/js/main.js"></script>
+<script src="./assets/js/enhancements.js"></script></body>
+</html>
